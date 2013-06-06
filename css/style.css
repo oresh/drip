@@ -694,7 +694,7 @@ p.copyright {
 }
 .free-trial-block-header {
  color:#fff;
- font-size:53px;
+ font-size:40px;
  text-transform:uppercase;
   -webkit-text-shadow: 0 5px 0 rgba(0,0,0,0.15);
  -moz-text-shadow: 0 5px 0 rgba(0,0,0,0.15);
@@ -725,6 +725,7 @@ p.full-access {
  padding:28px 40px;
  margin-bottom:-31px;
  position:relative;
+ right: 25px;
  z-index:50;
 }
 .free-register-form .form-label {
@@ -748,6 +749,22 @@ p.full-access {
  border:none;
  width:100%;
  margin-top:9px;
+ overflow: hidden;
+ text-indent: 1000px;
+ background: url('../images/free-trial-button.png') no-repeat top left;
+ cursor: pointer;
+}
+.free-trial-block {
+	position: relative;
+}
+
+.social-arrow-left {
+	background: url('../images/social-pricing.png') no-repeat top left;
+	width: 310px;
+	height: 240px;
+	position: absolute;
+	top: 235px;
+	left: -85px;
 }
 
 /* price table */
@@ -774,7 +791,7 @@ body.pricing .content-wrapper {
 
 .comment-row h3 {
 color: #574850;
-font-size:25px;
+font-size:22px;
 margin-bottom:4px;
 }
 .comment-row ul {
@@ -1047,8 +1064,8 @@ background:#3b5263;
 }
 
 .row-features {
- margin-top:198px;
- margin-bottom:45px;
+ margin-top:202px;
+ margin-bottom:49px;
 }
 .row-features ul {
  height:280px;
