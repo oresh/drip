@@ -1081,3 +1081,12 @@ background:#3b5263;
 .comment-row ul li{
  min-height:22px;
 }
+/**/
+.pricing .we-work-with-title {
+	font-size: 27px;
+	color: #3e3e3e;
+	margin-bottom: 5px;
+}
+.pricing .we-work-with {
+	padding-bottom: 25px;
+}
