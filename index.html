@@ -5,6 +5,9 @@
   <title>DripRevolution v.20</title>
   <link rel="stylesheet" type="text/css" href="css/sizes.css" media="all">
   <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/fonts.css" media="all">
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body class="front">
   <div class="main-wrapper">
@@ -18,7 +21,7 @@
       <div class="header-main cl-both">
         <div class="logo fl-left w375">Drip revolution</div>
         <ul class="site-menu fl-right w590">
-          <li><a href="#" class="site-menu-link">Home</a></li>
+          <li><a href="#" class="active site-menu-link">Home</a></li>
           <li><a href="#" class="site-menu-link">How it works</a></li>
           <li><a href="#" class="site-menu-link">Pricing</a></li>
           <li><a href="#" class="site-menu-link">Cases</a></li>
@@ -384,5 +387,28 @@
       </div>
     </div>
   </div>
+
+  <div class="popup-area">
+    <div class="grey-bg"></div>
+    <div class="register-popup popup">
+      <h3></h3>
+    </div>
+    <div class="login-popup popup">
+      <div class="popup-inner">
+      <span class="close"></span>
+        <h3>Login</h3>
+        <p class="description">Please fill out the following form with your credentials: Fields with * are required.</p>
+        <form action="#" class="contact-form">
+          <input type="text" name="email" id="" class="login-email form-text" placeholder="EMAIL ADRESS">
+          <input type="text" name="name" id="" class="login-password form-text" placeholder="YOUR PASSWORD">
+          <div class="fl-left remeber-me">
+            <label><input type="checkbox" name="remember-me"> <span>Remember me</span></label>
+          </div>
+          <input type="submit" value="login" class="login-submit fl-right">
+        </form>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
