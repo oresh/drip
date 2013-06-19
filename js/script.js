@@ -50,6 +50,15 @@
       })
     }
 
+    var slider = $('.bottom-slider');
+    if (slider.length) {
+      setInterval(function(){
+        $('.bottom-slide').first().animate({'margin-left':'-100%'},1200, function() {
+          $('.bottom-slide').first().css('margin-left',0).insertAfter($('.bottom-slide').last());
+        });
+      },5500);
+    }
+
 
   });
 })(jQuery)
