@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
   <link rel="stylesheet" type="text/css" href="css/fonts.css" media="all">
   <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.ezmark.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body class="steps">
@@ -159,7 +160,7 @@
     </div>
   </div>
 
-    <div class="popup-area">
+  <div class="popup-area">
     <div class="grey-bg"></div>
     <div class="register-popup popup">
       <div class="popup-inner">
@@ -182,6 +183,9 @@
           <input type="password" name="password" id="" class="login-password form-text" placeholder="REPEAT PASSWORD">
           <input type="text" name="email" id="" class="login-verification form-text" placeholder="VERIFICATION CODE">
           <div class="veirification-code-image"></div>
+          <div class="terms-and-conditions">
+            <label><input type="checkbox"><span>Agree with Terms & Conditions</span></label>
+          </div>
           <div class="form-actions">
             <span class="form-reset fl-left">reset</span>
             <input type="submit" value="SUBMIT" class="login-submit fl-right">
@@ -197,11 +201,39 @@
         <form action="#" class="contact-form">
           <input type="text" name="email" id="" class="login-email form-text" placeholder="EMAIL ADRESS">
           <input type="text" name="name" id="" class="login-password form-text" placeholder="YOUR PASSWORD">
+          <div class="popup-footer">
+            <a href="#" class="forgot-password-action">Forgot your password?</a>
+          </div>
           <div class="fl-left remeber-me">
             <label><input type="checkbox" name="remember-me"> <span>Remember me</span></label>
           </div>
           <input type="submit" value="login" class="login-submit fl-right">
         </form>
+      </div>
+    </div>
+    <div class="forget-passoword-popup popup">
+      <div class="popup-inner">
+      <span class="close"></span>
+        <h3>forgot your passowrd?</h3>
+        <p class="description">Your new password will be sent to your e-mail adress.</p>
+        <form action="#" class="forget-passowrd contact-form">
+          <input type="text" name="email" id="" class="login-email form-text" placeholder="EMAIL ADRESS">
+          <input type="submit" value="Send" class="login-submit">
+        </form>
+      </div>
+    </div>
+    <div class="reset-passoword-popup popup">
+      <div class="popup-inner">
+      <span class="close"></span>
+        <p class="message-icon">Your new password was sent to your email.</p>
+      </div>
+    </div>
+    <div class="thanks-registration-popup popup">
+      <div class="popup-inner">
+      <span class="close"></span>
+        <h3>Thank you for registration!</h3>
+        <p>Your credentials were sent to your email.
+        Now you will be redirected to the Dashboard.</p>
       </div>
     </div>
   </div>

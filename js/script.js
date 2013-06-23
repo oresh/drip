@@ -1,6 +1,22 @@
 (function($) {
 
   $(document).ready(function() {
+
+    if ($('body.front').length) {
+      $('.social-icons-large').addClass('animate');
+
+      $('body').animate({'border':'0'},4500,function() {
+        $('.social-icons-large').removeClass('animate');
+      });
+    }
+
+    if ($('body.pricing').length) {
+      $('.social-arrow-left').addClass('animate');
+
+      $('body').animate({'border':'0'},4500,function() {
+        $('.social-arrow-left').removeClass('animate');
+      });
+    }
     
     var questionList = $('.questions-list');
     if (questionList.length) {
@@ -58,6 +74,101 @@
         });
       },5500);
     }
+
+        var $cases = $('.cases-wrapper');
+    if ($cases.length) {
+      var $this = $cases.find('.cases-item');
+        $expander = $this.children('.cases-expand').find('.cases-more'),
+        $collapser = $this.find('.cases-hidden .cases-expand .cases-more');
+
+        $expander.click(function() {
+          var _this = $(this),
+            expandStr = _this.text() == 'see more' ? 'close' : 'see more';
+
+          $('html, body').animate({
+            scrollTop: _this.parents('.cases-item').offset().top - 20
+          }, 500);
+
+          _this.text(expandStr).toggleClass('is-active');
+          _this.parents('.cases-item').siblings()
+            .find('.cases-hidden').hide()
+          _this.parents('.cases-item').siblings()
+            .children('.cases-expand').find('.cases-more')
+              .text('see more').removeClass('is-active');
+          _this.parents('.cases-item').find('.cases-hidden').slideToggle(350);
+        });
+        
+        $collapser.click(function() {
+          var _this = $(this);
+
+          $('html, body').animate({
+            scrollTop: _this.parents('.cases-item').offset().top - 20
+          }, 500);
+
+          _this.parents('.cases-item').children('.cases-expand')
+            .find('.cases-more').text('see more')
+              .removeClass('is-active');
+          _this.parents('.cases-item').find('.cases-hidden').slideUp(350);
+        });
+
+    }
+
+    var $buttons = $('.getyourrisk-trial-button, .price-sign-up, .phone-number a, .sign-up.large');
+    if ($buttons.length) {
+      $buttons.append('<span class="sparkle" />');
+
+      $buttons.hover(function() {
+        var $this = $(this),
+          $sparkle = $this.find('.sparkle')
+
+        if (!$sparkle.hasClass('processed')) {
+          $sparkle.addClass('processed').animate({'left':'180'}, 500, function () {
+            $sparkle.removeClass('processed').css('left','-60px');
+          });
+        }        
+      });
+
+    }
+
+    if ($('.button.large.yellow').length) {
+      $('.button.large.yellow').wrap('<span class="large-sparkle" />');
+      $('.large-sparkle').append('<span class="sparkle">');
+      setInterval(function(){
+        $('.large-sparkle .sparkle').animate({'left':'100%'},600, function() {
+          $('.large-sparkle .sparkle').css('left','-120px');
+        });
+      },4500);
+    }
+    
+    $('.register-popup input[type="checkbox"], .login-popup input[type="checkbox"]').ezMark();
+
+    $('.forgot-password-action').click(function(e) {
+      e.preventDefault();
+      $(this).parents('.popup').removeClass('active-popup')
+      .siblings('.forget-passoword-popup').addClass('active-popup')
+    });
+
+    $('.forget-passowrd .login-submit').click(function(e) {
+      e.preventDefault();
+      var $this = $(this);
+      if ($this.siblings('input').val() != '') {
+        $this.parents('.active-popup').removeClass('active-popup')
+      .siblings('.reset-passoword-popup').addClass('active-popup');
+      } else {
+        $this.siblings('input').addClass('error');
+      }
+    });
+
+    $('.register-popup .login-submit').click(function(e) {
+      e.preventDefault();
+      var $this = $(this);    
+      $this.parents('.active-popup').removeClass('active-popup')
+      .siblings('.thanks-registration-popup').addClass('active-popup');
+    });
+
+    $('.popup').bind('click', 'input.error', function(e) {
+      $(e.target).removeClass('error');
+    })
 
 
   });

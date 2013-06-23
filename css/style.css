@@ -1219,6 +1219,9 @@ background:#3b5263;
  letter-spacing:1px;
  margin-top:12px;
 }
+.col1 .ranking-factors-title {
+ margin-top:16px;
+}
 
 /* fonts */
 body,
@@ -1267,6 +1270,14 @@ font-weight:600;
 }
 .trial-version-benifits-header h4{
 font-weight:700; 
+}
+.how-it-works-description {
+ position:absolute;
+ top:42px;
+ left:0;
+}
+.how-it-works-column {
+ height:95px;
 }
 
 /* pricing fonts */
@@ -1984,13 +1995,13 @@ color:#525252;
 }
 .popup .remeber-me {
 position:relative;
-top:7px;
+top:10px;
 }
 .popup .remeber-me label span {
  font-size:12px;
  color:#878787;
  position:relative;
- top:-2px;
+ top:-4px;
  margin-left:10px;
 }
 .login-submit,
@@ -2009,6 +2020,10 @@ top:7px;
  font-size:16px;
  font-weight:700;
  cursor: pointer;
+  -webkit-box-shadow: 0 3px 0 rgba(0,0,0,0.07);
+ -moz-box-shadow: 0 3px 0 rgba(0,0,0,0.07);
+ -ms-box-shadow: 0 3px 0 rgba(0,0,0,0.07);
+ box-shadow: 0 3px 0 rgba(0,0,0,0.07);
 }
 .form-reset {
  background: #c3c3c3;
@@ -2022,9 +2037,58 @@ top:7px;
 .login-submit:hover {
 	background: #ffb900;
 }
+.popup-footer {
+ clear:both;
+ font-size:13px;
+ margin-bottom:30px;
+ margin-top:-4px;
+}
+.popup-footer a {
+ color:#2698ec;
+ font-size:11px;
+ font-style:italic;
+ text-decoration:none;
+}
+.popup-footer a:hover {
+ color:#0657ec;
+ text-decoration:none;
+}
+.terms-and-conditions {
+ padding:10px 0 0;
+ font-size:14px;
+}
+.terms-and-conditions {
+ padding-top:15px;
+ font-size:12px;
+}
+.terms-and-conditions span {
+ margin-left: 22px;
+position: relative;
+top: -3px;
+color: #878787;
+}
 
+/* popup checkbox */
+.ez-hide {
+visibility:hidden;
+}
+.ez-checkbox {
+ display:inline-block;
+ width:17px;
+ height:20px;
+ background: url('../images/checkboxes.png') no-repeat top left;
+ cursor: pointer;
+}
+.ez-checkbox.ez-checked {
+ background-position:bottom left;
+}
+
+/**/
 .popup .login-password {
- margin-bottom:35px;
+}
+.forget-passoword-popup .login-submit {
+display:block;
+margin:35px auto 0;
 }
 .register-popup .form-text {
  margin-bottom: 10px;
@@ -2045,6 +2109,8 @@ padding-left: 164px;
 .form-actions {
  overflow: hidden;
  padding-top: 25px;
+padding-bottom: 5px;
+margin-bottom: -5px;
 }
 .popup .close {
  width: 24px;
@@ -2074,6 +2140,22 @@ box-sizing: border-box;
 border-radius: 3px;
 text-transform: uppercase;
 }
+.reset-passoword-popup p {
+ font-size:12px;
+ color:#878787;
+ padding-left:30px;
+ background:url('../images/message-icon.png') no-repeat center left;
+}
+
+.thanks-registration-popup p {
+	font-size: 12px;
+	line-height: 1.4em;
+	color: #878787;
+}
+.thanks-registration-popup h3 {
+margin-bottom: 22px;
+}
+
 
 /* front page fixes */
 .more-social-icons.col {
@@ -2297,6 +2379,49 @@ background-image: -webkit-gradient(
 color: #403926;
 }
 
+/* button animate */
+.getyourrisk-trial-button, .price-sign-up, .phone-number a, .sparkle-wrapper, .sign-up.large { 
+ position:relative;
+ overflow:hidden;
+}
+.getyourrisk-trial-button .sparkle, 
+.price-sign-up .sparkle, 
+.phone-number a .sparkle,
+.sparkle-wrapper .sparkle,
+.sign-up.large .sparkle {
+ background: url('../images/sparkle.png') no-repeat top left;
+ display:block;
+ position:absolute;
+ top:-10px;
+ left:-60px;
+ height: 60px;
+ width: 60px;
+}
+
+.large-sparkle {
+ overflow:hidden;
+ padding-bottom:5px;
+ display:block;
+ margin-bottom:-5px;
+ position:relative;
+ width: 409px;
+}
+.large-sparkle .sparkle {
+ width:120px;
+ height:120px;
+ position:absolute;
+ bottom:5px;
+ left:-120px;
+ background:url('../images/large-sparkle.png') no-repeat center center;
+}
+.free-trial-form .large-sparkle {
+ margin-top: 9px;
+ width: 360px;
+}
+.free-trial-form .large-sparkle input {
+ margin-top:0;
+}
+
 /* Cases page */
 .cases-header {
  padding: 43px 40px 30px;
@@ -2433,7 +2558,7 @@ min-height:272px;
  box-shadow: inset 0 1px rgba(255,255,255,1);
 }
 .cases-hidden {
- //display:none; 
+ display:none; 
  border-top:1px #d6d6d6 dashed;
  padding:35px 40px 0;
 }
@@ -2493,4 +2618,264 @@ min-height:272px;
  line-height:46px;
  height:46px;
  padding:0 35px;
+}
+
+/* front page cases promo */
+.front .cases-promo {
+border:none;
+background:#e1e1e1;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+-ms-box-shadow: none;
+box-shadow: none;
+}
+.front .cases-promo-left {
+ padding:55px 0 45px 57px;
+}
+.front .cases-promo-right {
+ padding:55px 57px 0 0;
+}
+
+/**/
+.cases-hidden {
+ display:none;
+}
+.cases-expand {
+ cursor: pointer;
+ clear:both;
+}
+.cases-more:hover {
+ color: #056bbe;
+}
+.cases-more.is-active {
+ background:transparent;
+}
+.cases-hidden .cases-expand {
+ width:900px;
+ margin-left:-40px;
+}
+
+/* terms */
+.plain-text {
+ font-size:14px;
+ padding:30px 40px;
+}
+.plain-text p {
+ margin-bottom:14px;
+}
+.plain-text strong,
+.plain-text b {
+ font-weight:500;
+}
+.plain-text a {
+ color:#1d8eea;
+ text-decoration:none;
+}
+.plain-text h1,
+.plain-text h2,
+.plain-text h3,
+.plain-text h4,
+.plain-text h5 {
+ margin: 0 0 8px 0;
+}
+
+
+
+
+/* animations */
+h1 {
+ animation-duration: 3s;
+ animation-name: slidein;
+}
+
+.animate .large-twitter,
+.animate .large-facebook,
+.animate .large-youtube,
+.animate .large-google,
+.animate .large-tumblr {
+}
+.animate .large-twitter{
+	-webkit-animation: twitter 0.35s infinite alternate; /* Chrome, Safari 5+ */
+    -moz-animation: twitter 0.35s infinite alternate; /* Firefox 5-15 */
+      -o-animation: twitter 0.35s infinite alternate; /* Opera 12.00 */
+         animation: twitter 0.35s infinite alternate;
+}
+.animate .large-facebook{
+	-webkit-animation: facebook 0.4s 0.2s infinite alternate; /* Chrome, Safari 5+ */
+    -moz-animation: facebook 0.4s 0.2s infinite alternate; /* Firefox 5-15 */
+      -o-animation: facebook 0.5s 0.2s infinite alternate; /* Opera 12.00 */
+         animation: facebook 0.5s 0.2s infinite alternate;
+}
+.animate .large-tumblr{
+	-webkit-animation: tumblr 0.35s 0.4s infinite alternate; /* Chrome, Safari 5+ */
+    -moz-animation: tumblr 0.35s 0.4s infinite alternate; /* Firefox 5-15 */
+      -o-animation: tumblr 0.35s 0.4s infinite alternate; /* Opera 12.00 */
+         animation: tumblr 0.35s 0.4s infinite alternate;
+}
+.animate .large-google{
+	-webkit-animation: google 0.35s 0.1s infinite alternate; /* Chrome, Safari 5+ */
+    -moz-animation: google 0.35s 0.1s infinite alternate; /* Firefox 5-15 */
+      -o-animation: google 0.35s 0.1s infinite alternate; /* Opera 12.00 */
+         animation: google 0.35s 0.1s infinite alternate;
+}
+.animate .large-youtube{
+	-webkit-animation: youtube 0.4s 0.1s infinite alternate; /* Chrome, Safari 5+ */
+    -moz-animation: youtube 0.4s 0.1s infinite alternate; /* Firefox 5-15 */
+      -o-animation: youtube 0.4s 0.1s infinite alternate; /* Opera 12.00 */
+         animation: youtube 0.4s 0.1s infinite alternate;
+}
+
+@-webkit-keyframes facebook{
+ from { top: 57px; left: 22px; }
+ to   { top: 55px; left: 20px; }
+}
+@-webkit-keyframes twitter{
+ from { top: 133px; left: 167px; }
+ to   { top: 136px; left: 168px; }
+}
+@-webkit-keyframes youtube{
+ from { top: -4px; left: 187px; }
+ to   { top: 0px; left: 184px; }
+}
+@-webkit-keyframes google{
+ from { top: 115px; left: 283px; }
+ to   { top: 116px; left: 286px; }
+}
+@-webkit-keyframes tumblr{
+ from { top: 161px; left: 16px; }
+ to   { top: 160px; left: 14px; }
+}
+
+@-moz-keyframes facebook{
+ from { top: 57px; left: 22px; }
+ to   { top: 55px; left: 20px; }
+}
+@-moz-keyframes twitter{
+ from { top: 133px; left: 167px; }
+ to   { top: 136px; left: 168px; }
+}
+@-moz-keyframes youtube{
+ from { top: -4px; left: 187px; }
+ to   { top: 0px; left: 184px; }
+}
+@-moz-keyframes google{
+ from { top: 115px; left: 283px; }
+ to   { top: 116px; left: 286px; }
+}
+@-moz-keyframes tumblr{
+ from { top: 161px; left: 16px; }
+ to   { top: 160px; left: 14px; }
+}
+
+@-o-keyframes facebook{
+ from { top: 57px; left: 22px; }
+ to   { top: 55px; left: 20px; }
+}
+@-o-keyframes twitter{
+ from { top: 133px; left: 167px; }
+ to   { top: 136px; left: 168px; }
+}
+@-o-keyframes youtube{
+ from { top: -4px; left: 187px; }
+ to   { top: 0px; left: 184px; }
+}
+@-o-keyframes google{
+ from { top: 115px; left: 283px; }
+ to   { top: 116px; left: 286px; }
+}
+@-o-keyframes tumblr{
+ from { top: 161px; left: 16px; }
+ to   { top: 160px; left: 14px; }
+}
+
+@keyframes facebook{
+ from { top: 57px; left: 22px; }
+ to   { top: 55px; left: 20px; }
+}
+@keyframes twitter{
+ from { top: 133px; left: 167px; }
+ to   { top: 136px; left: 168px; }
+}
+@keyframes youtube{
+ from { top: -4px; left: 187px; }
+ to   { top: 0px; left: 184px; }
+}
+@keyframes google{
+ from { top: 115px; left: 283px; }
+ to   { top: 116px; left: 286px; }
+}
+@keyframes tumblr{
+ from { top: 161px; left: 16px; }
+ to   { top: 160px; left: 14px; }
+}
+
+.animate .social-facebook-small {
+	-webkit-animation: facebooksmall 0.4s 0.1s infinite alternate; /* Chrome, Safari 5+ */
+    -moz-animation: facebooksmall 0.4s 0.1s infinite alternate; /* Firefox 5-15 */
+      -o-animation: facebooksmall 0.4s 0.1s infinite alternate; /* Opera 12.00 */
+         animation: facebooksmall 0.4s 0.1s infinite alternate;
+}
+.animate .social-twitter-small {
+	-webkit-animation: twittersmall 0.35s 0.1s infinite alternate; /* Chrome, Safari 5+ */
+    -moz-animation: twittersmall 0.35s 0.1s infinite alternate; /* Firefox 5-15 */
+      -o-animation: twittersmall 0.35s 0.1s infinite alternate; /* Opera 12.00 */
+         animation: twittersmall 0.35s 0.1s infinite alternate;
+}
+.animate .social-tumblr-small {
+	-webkit-animation: tumblrsmall 0.35s 0.3s infinite alternate; /* Chrome, Safari 5+ */
+    -moz-animation: tumblrsmall 0.35s 0.3s infinite alternate; /* Firefox 5-15 */
+      -o-animation: tumblrsmall 0.35s 0.3s infinite alternate; /* Opera 12.00 */
+         animation: tumblrsmall 0.35s 0.3s infinite alternate;	
+}
+
+@-webkit-keyframes facebooksmall{
+ from { top: 0px; left: 84px; }
+ to   { top: 0px; left: 87px; }
+}
+@-webkit-keyframes twittersmall{
+ from { top: 17px; left: 213px; }
+ to   { top: 19px; left: 216px; }
+}
+@-webkit-keyframes tumblrsmall{
+ from { top: 87px; left: 0px; }
+ to   { top: 85px; left: 3px; }
+}
+
+@-ms-keyframes facebooksmall{
+ from { top: 0px; left: 84px; }
+ to   { top: 0px; left: 87px; }
+}
+@-ms-keyframes twittersmall{
+ from { top: 17px; left: 213px; }
+ to   { top: 19px; left: 216px; }
+}
+@-ms-keyframes tumblrsmall{
+ from { top: 87px; left: 0px; }
+ to   { top: 85px; left: 3px; }
+}
+
+@-o-keyframes facebooksmall{
+ from { top: 0px; left: 84px; }
+ to   { top: 0px; left: 87px; }
+}
+@-o-keyframes twittersmall{
+ from { top: 17px; left: 213px; }
+ to   { top: 19px; left: 216px; }
+}
+@-o-keyframes tumblrsmall{
+ from { top: 87px; left: 0px; }
+ to   { top: 85px; left: 3px; }
+}
+
+@keyframes facebooksmall{
+ from { top: 0px; left: 84px; }
+ to   { top: 0px; left: 87px; }
+}
+@keyframes twittersmall{
+ from { top: 17px; left: 213px; }
+ to   { top: 19px; left: 216px; }
+}
+@keyframes tumblrsmall{
+ from { top: 87px; left: 0px; }
+ to   { top: 85px; left: 3px; }
 }
