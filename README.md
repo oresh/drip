@@ -16,8 +16,8 @@ Includes CSS, HTML, Images and some JavaScript.
 <li>Size based grid system
  	<ul><li>Because the grid is bearly existant, but the sizes are different for
  	most of the blocks, class name of the element size was added to each block.</li>
- 	<li>They look like .w380 for width: 380px; or .w700a for width: 700px; margin: 0 auto;
- 	Those classes can be easely transformed to percents intead of px or em.</li></ul></li>
+ 	<li>They look like .w380 for width: 380px; or .w700a for width: 700px; margin: 0 auto;</li>
+ 	<li>Those classes can be easely transformed to percents intead of px or em.</li></ul></li>
 
 <li>Popups
  	<ul><li>Simple set of popups for login/register and related stuff with minimum js</li></ul></li>
