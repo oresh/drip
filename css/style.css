@@ -12,6 +12,10 @@ body {
  margin:0;
  padding:0;
 }
+a {
+ color:#1d8eea;
+ text-decoration:none;
+}
 .main-wrapper {
 background:url('../images/header-bg.jpg') no-repeat top center;  
 }
@@ -221,10 +225,20 @@ p {
  font-size:28px;
  color: #6f6f6f;
 }
-.google-name {color: #048bff;}
+/*
+<span class="google-name">G<span class="red">o</span><span class="yellow">o</span>g<span class="green">l</span><span class="red">e</span></span>
+
+*/
+
+.google-name {color: #048bff; display: inline !important;}
+.google-name span {display: inline !important; }
 .google-name .red {color: #ff0000;}
 .google-name .yellow {color: #fcd228;}
 .google-name .green {color: #08b210;}
+
+.header-slider .google-name {
+	color: #204385;
+}
 
 .ranking-factors {
  overflow:hidden;
@@ -763,7 +777,7 @@ p.copyright {
  -moz-text-shadow: 0 5px 0 rgba(0,0,0,0.15);
  -ms-text-shadow: 0 5px 0 rgba(0,0,0,0.15);
  text-shadow: 0 5px 0 rgba(0,0,0,0.15);
- margin-bottom:27px;
+ margin-bottom:14px;
  margin-top: -10px;
 }
 .free-trial-block-header .yellow {
@@ -1176,7 +1190,6 @@ background:#3b5263;
  margin-left:18px;
 }
 .row-network ul {
- height:880px;
 }
 .comment-row ul li{
  min-height:22px;
@@ -1207,9 +1220,21 @@ background:#3b5263;
 .free-trial-description {
  margin-top:22px;
 }
+
 .promo-title {
- width:700px;
+ width:100%;
+ overflow:hidden;
 }
+.header-slider {
+ width:2880px;
+ text-align:left;
+}
+.header-slider h1 {
+ float:left;
+ width:960px;
+ text-align:center;
+}
+
 .site-menu {
  width:556px;
  position:relative;
@@ -1461,7 +1486,7 @@ padding:0 35px;
  padding-top:25px;
 }
 .easy-steps-subtitle {
- font-size:79px;
+ font-size:75px;
  color: #f2ca28;
 }
 .easy-steps-title,
@@ -1839,6 +1864,9 @@ box-sizing: border-box;
  float:right;
  margin-right: 15px;
 }
+.contact-details-right .large-sparkle {
+ width:359px;
+}
 .contact-details-right a {
 display:block;
 background:url('../images/free-trial-button.png') no-repeat top left;
@@ -2125,7 +2153,7 @@ margin-bottom: -5px;
  width: 307px;
  height: 41px;
  margin-bottom: 15px;
- background: #2697ec url('../images/white-approve.png') no-repeat 13px 50%;
+ background: #2697ec;
  line-height: 41px;
  font-family: 'open_sans';
  font-weight: 600;
@@ -2233,7 +2261,7 @@ left: 18px;
 .slider-image {
  background: #fff url('../images/star-image.png') no-repeat 88px 0;
  width: 51px;
- height: 48px;
+ height: 80px;
  float: left;
  padding-right: 34px;
  padding-left: 88px;
@@ -2259,7 +2287,7 @@ left: 18px;
  font-weight:500;
  font-family:'museo';
  color:#cfcfcf;
- padding-right:;
+ padding-right:25px;
 }
 .slider-quote-author {
  display:block;
@@ -2363,7 +2391,7 @@ background-image: -webkit-gradient(
 
 .getyourrisk-trial-button:hover,
 .price-sign-up:hover,
-.phone-number a:hover {
+.phone-number a {
  background-image: linear-gradient(bottom, rgb(255,184,0) 0%, rgb(253,213,10) 100%);
 background-image: -o-linear-gradient(bottom, rgb(255,184,0) 0%, rgb(253,213,10) 100%);
 background-image: -moz-linear-gradient(bottom, rgb(255,184,0) 0%, rgb(253,213,10) 100%);
@@ -2377,6 +2405,13 @@ background-image: -webkit-gradient(
  color-stop(1, rgb(253,213,10))
 );
 color: #403926;
+}
+.phone-number a {
+ cursor: default;
+ -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
 }
 
 /* button animate */
@@ -2878,4 +2913,24 @@ h1 {
 @keyframes tumblrsmall{
  from { top: 87px; left: 0px; }
  to   { top: 85px; left: 3px; }
+}
+
+/* popups */
+.give-me-trial .ez-checkbox {
+ position:relative;
+ margin-right:14px;
+ top:8px;
+}
+.give-me-trial .ez-checkbox.ez-checked{
+ top:4px;
+}
+.give-me-trial {
+ padding-left:14px;
+}
+.terms-and-conditions a {
+ text-decoration:none;
+ color:#1d8eea;
+}
+.terms-and-conditions a:hover{
+ text-decoration:underline;
 }

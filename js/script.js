@@ -18,6 +18,20 @@
       });
     }
     
+    if ($('.button.large.yellow, .contact-details-right a').length) {
+      $('.button.large.yellow, .contact-details-right a').wrap('<span class="large-sparkle" />');
+      $('.large-sparkle').append('<span class="sparkle">');
+      $('.large-sparkle .sparkle').delay(1000).animate({'left':'100%'},600, function() {
+        console.log('work?');
+          $('.large-sparkle .sparkle').css('left','-120px');
+        });
+      setInterval(function(){
+        $('.large-sparkle .sparkle').animate({'left':'100%'},600, function() {
+          $('.large-sparkle .sparkle').css('left','-120px');
+        });
+        },4500);
+    }
+
     var questionList = $('.questions-list');
     if (questionList.length) {
       questionList.find('h3').click(function() {
@@ -72,6 +86,15 @@
         $('.bottom-slide').first().animate({'margin-left':'-100%'},1200, function() {
           $('.bottom-slide').first().css('margin-left',0).insertAfter($('.bottom-slide').last());
         });
+      },3500);
+    }
+
+    var headerslider = $('.header-slider');
+    if (slider.length) {
+      setInterval(function(){
+        $('.header-slider h1').first().animate({'margin-left':'-100%'},1600, function() {
+          $('.header-slider h1').first().css('margin-left',0).insertAfter($('.header-slider h1').last());
+        });
       },5500);
     }
 
@@ -113,7 +136,7 @@
 
     }
 
-    var $buttons = $('.getyourrisk-trial-button, .price-sign-up, .phone-number a, .sign-up.large');
+    var $buttons = $('.getyourrisk-trial-button, .price-sign-up, .sign-up.large');
     if ($buttons.length) {
       $buttons.append('<span class="sparkle" />');
 
@@ -130,15 +153,6 @@
 
     }
 
-    if ($('.button.large.yellow').length) {
-      $('.button.large.yellow').wrap('<span class="large-sparkle" />');
-      $('.large-sparkle').append('<span class="sparkle">');
-      setInterval(function(){
-        $('.large-sparkle .sparkle').animate({'left':'100%'},600, function() {
-          $('.large-sparkle .sparkle').css('left','-120px');
-        });
-      },4500);
-    }
     
     $('.register-popup input[type="checkbox"], .login-popup input[type="checkbox"]').ezMark();
 
